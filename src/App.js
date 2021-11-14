@@ -19,6 +19,7 @@ class App extends React.Component {
       isSignedIn: false
     }
     this.handleSignIn = this.handleSignIn.bind(this)
+    this.handleSignOut = this.handleSignOut.bind(this)
   }
 
   handleSignIn() {
@@ -27,12 +28,19 @@ class App extends React.Component {
       isSignedIn: true
     })
   }
+
+  handleSignOut() {
+    console.log("handleSignOut")
+    this.setState({       // ROBERTO: here you want to check if the user is signed in or not, if they are, set isSignedIn to true
+      isSignedIn: false
+    })
+  }
   
   render () {
     return this.state.isSignedIn ? 
       (
         <>
-          <NavigationBar />
+          <NavigationBar handleSignOut={this.handleSignOut}/>
           <div className="app">
             <Router>
               <Routes>

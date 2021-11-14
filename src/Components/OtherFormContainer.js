@@ -1,5 +1,5 @@
 import React from 'react'
-import FormComponent from './FormComponent'
+import OtherForm from './OtherForm'
 
 import {initializeApp} from 'firebase/app';
 import {getFirestore, doc, setDoc} from 'firebase/firestore';
@@ -25,22 +25,21 @@ function writeUsers(userMood) {
         tookNap: false,
         hoursOfSleep: 8,
         numberOfMeals: 3,
-        qualityOfSleep: 10
+        qualityOfSleep: 10,
+        date: null
     });
 }
 
- class Form extends React.Component {
+
+class OtherFormContainer extends React.Component {
     constructor () {
         super()
-        const d = new Date();
-        console.log(d);
         this.state = {
             tookNap: false,
             hoursOfSleep: 8,
             numberOfMeals: 3,
             qualityOfSleep: 10,
-            mood: 0,
-            date: ""
+            mood: 0
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -48,11 +47,12 @@ function writeUsers(userMood) {
     }
 
     handleChange (event) {
+        console.log("handleChange")
         const {name, value} = event.target
         this.setState({
             [name]: value
         })
-        console.log([name] + " set to " + value);
+        console.log([name] + " set to " + value)
     }
 
     handleSubmit () {
@@ -67,17 +67,15 @@ function writeUsers(userMood) {
             mood: mood
         })
     }
-    
-    render () {
-        return(
-            <FormComponent
-                handleSubmit={this.handleSubmit}
-                handleChange={this.handleChange}
-                handleMoodClick={this.handleMoodClick}
-                {...this.state}
-            />
-        )
+
+    render() {
+        <OtherForm 
+            handleSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            handleMoodClick={this.handleMoodClick}
+            {...this.state}
+        />
     }
 }
 
-export default Form
+export default OtherFormContainer
