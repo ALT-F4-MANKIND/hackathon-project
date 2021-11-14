@@ -20,16 +20,17 @@ apiKey: "AIzaSyCV6lWSaS3VpPALnuj_nZ6oGnsBG1_RM-g",
 
 const firestore = getFirestore();
 
-const user = doc(firestore, '/users/users/');
-function writeUsers(userMood) {
-    setDoc(user, {
+const userData = doc(firestore, '/users/users/');
+function writeUserData(userMood, hasTakenNap, hoursSlept, numMeals, sleepQuality) {
+    setDoc(userData, {
         mood: userMood, 
-        tookNap: false,
-        hoursOfSleep: 8,
-        numberOfMeals: 3,
-        qualityOfSleep: 10
+        tookNap: hasTakenNap,
+        hoursOfSleep: hoursSlept,
+        numberOfMeals: numMeals,
+        qualityOfSleep: sleepQuality
     });
 }
+
 
  class Form extends React.Component {
     constructor () {
@@ -54,7 +55,11 @@ function writeUsers(userMood) {
     }
 
     handleSubmit () {
-        writeUsers(this.state.mood);
+        writeUserData(this.state.mood, 
+            this.state.tookNap, 
+            this.state.hoursOfSleep, 
+            this.state.numberOfMeals,
+            this.state.qualityOfSleep);
         console.log("Handle Submit")
         // Send state off to make an entry into database
     }
