@@ -7,7 +7,7 @@ export default function FormComponent (props) {
     return(
         <form className="form">
             {/* Put Anish and Bilal's form in here */}
-            <p>How are you feeling today?</p>
+            <p>How Are You Feeling Today?</p>
             <div className="moodPanel">
                 <img 
                     src="happy-face.png"
