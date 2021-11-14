@@ -2,7 +2,6 @@ import React from 'react'
 import './Form.css'
 import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ScaleText from 'react-scale-text'
 
 export default function FormComponent (props) {   
     return(
@@ -31,8 +30,37 @@ export default function FormComponent (props) {
                     onClick={() => props.handleMoodClick("sad")}
                     alt=""
                     style={ props.mood === "sad" ? {opacity: 1} : {opacity: 0.5}}
+                    
                 />
             </div>
+
+            <p style={{color: 'white'}}>How Many Meals Did You Eat Today?</p>
+            <div className="foodPanel">
+                <img 
+                    src="single-slice.png"
+                    className="food"
+                    alt=""
+                />
+                <img 
+                    src="half-eaten.png"
+                    className="food"
+                    alt=""
+                />
+                <img 
+                    src="full-pizza.png"
+                    className="food"
+                    alt=""
+                />
+            </div>
+
+            <div className="sliderPanel">
+                <p>
+                    <input type="range" min="1" max="10" value="50" class="slider" id="myRange"
+                        oninput="document.getElementById('Value:').innerHTML = this.value"/>
+                    <label id="Value:"></label>
+                </p>
+            </div>
+        
             <Button 
                 className="m-3">
                 Clear
