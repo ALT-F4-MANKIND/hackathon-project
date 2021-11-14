@@ -1,11 +1,13 @@
 import React from 'react'
 import './Form.css'
+import { Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function FormComponent (props) {   
     return(
         <form className="form">
             {/* Put Anish and Bilal's form in here */}
-            <p>Here is the form</p>
+            <p>How are you feeling today?</p>
             <div className="moodPanel">
                 <img 
                     src="happy-face.png"
@@ -30,10 +32,15 @@ export default function FormComponent (props) {
                     style={ props.mood === "sad" ? {opacity: 1} : {opacity: 0.5}}
                 />
             </div>
-            <button 
-                className="submit"
-                onClick={props.handleSubmit}>Submit
-            </button>
+            <Button 
+                className="m-3">
+                Clear
+            </Button>
+            <Button 
+                className="m-3"
+                onClick={props.handleSubmit}>
+                Submit
+            </Button>
         </form>
     )
 }
