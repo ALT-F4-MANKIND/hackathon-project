@@ -2,6 +2,7 @@ import React from 'react'
 import './Form.css'
 import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ScaleText from 'react-scale-text'
 
 export default function FormComponent (props) {   
     return(
