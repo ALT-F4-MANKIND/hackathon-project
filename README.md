@@ -1,4 +1,4 @@
-# hackathon-project
+# Hack the Change 2021 Project: "Level Up"
 Due to many underlying factors in our world, such as Covid-19 and online learning/working, there has been a decrease in mental wellbeing. This means that, although our quality of life has been increasing, overall happiness and good mental health has been on the decline
 Therefore, it is important to take care of our mental health by tracking our daily habits using our application: “Level Up”!
 Level Up is an application to help users keep track of their daily habits and health, such as weight, height, hours of sleep, number of meals, frequent rests/naps, and happiness.
