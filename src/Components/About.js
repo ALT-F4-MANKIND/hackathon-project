@@ -5,7 +5,8 @@ import { Container } from 'react-bootstrap'
 export default function About () {
     return(
         <Container>
-            <Container.Title>About HealthCheck</Container.Title>
+            <h1>About LevelUp</h1>
+            <p>LevelUp is a free-to-use web app made by the group Alt_F4 Mankind</p>
         </Container>
     )
 }

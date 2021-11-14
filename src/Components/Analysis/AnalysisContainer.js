@@ -7,7 +7,7 @@ import { Card, Container, Title } from 'react-bootstrap'
 export default function AnalysisContainer() {
     return(
         <Container className="content-wrap">                
-            <Card>
+            <Card className="m-4">
                 <Card.Title className="m-4">Analysis</Card.Title>
                 <Card.Body>
                     <Graph />
