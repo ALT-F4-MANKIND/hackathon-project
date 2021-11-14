@@ -74,7 +74,7 @@ const userData = {
     }
 
     handleSubmit () {
-        writeUsers("happy"); // this is giving me attitude 
+        writeUsers(this.state.mood); // this is giving me attitude 
         console.log("Handle Submit")
         // Send state off to make an entry into database
         
@@ -88,7 +88,7 @@ const userData = {
         this.setState({
             mood: mood
         })
-        writeUsers(this.state.mood); // functunality is questionable
+        
     }
     
     render () {
