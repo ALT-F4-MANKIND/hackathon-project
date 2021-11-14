@@ -25,34 +25,48 @@ function writeUsers(userMood) {
         tookNap: false,
         hoursOfSleep: 8,
         numberOfMeals: 3,
-        qualityOfSleep: 10
+        qualityOfSleep: 10,
     });
 }
 
  class Form extends React.Component {
-    constructor () {
-        super()
+     
+     constructor () {
         const d = new Date();
-        console.log(d);
-        this.state = {
+        const dateString = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
+        const blankState = {
             tookNap: false,
-            hoursOfSleep: 8,
-            numberOfMeals: 3,
-            qualityOfSleep: 10,
-            mood: 0,
-            date: ""
+            hoursOfSleep: "",
+            numberOfMeals: "",
+            mood: "",
+            date: dateString,
+            weight: "",
+            height: "",
         }
+        super()
+        this.state = blankState
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleMoodClick = this.handleMoodClick.bind(this)
+        this.reset = this.reset.bind(this)
     }
 
-    handleChange (event) {
-        const {name, value} = event.target
+    handleChange (event) {        
+        const {name, value, type, checked} = event.target
+
+        if (type === "checkbox") {
+            console.log("Changing checkbox")
+            this.setState({
+                [name]: checked
+            })
+            return
+        }
+        console.log("Setting " + [name] + " to " + value)
         this.setState({
             [name]: value
         })
-        console.log([name] + " set to " + value);
+        console.log([name] + " set to " + value)
+        console.log(this.state)
     }
 
     handleSubmit () {
@@ -67,6 +81,19 @@ function writeUsers(userMood) {
             mood: mood
         })
     }
+
+    reset () {
+        console.log("reset")
+        this.setState({
+            tookNap: false,
+            hoursOfSleep: "",
+            numberOfMeals: "",
+            mood: "",
+            date: "",
+            weight: "",
+            height: "",
+        })
+    }
     
     render () {
         return(
@@ -74,6 +101,7 @@ function writeUsers(userMood) {
                 handleSubmit={this.handleSubmit}
                 handleChange={this.handleChange}
                 handleMoodClick={this.handleMoodClick}
+                reset={this.reset}
                 {...this.state}
             />
         )
