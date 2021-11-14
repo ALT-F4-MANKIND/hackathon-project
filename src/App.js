@@ -101,27 +101,23 @@ class App extends React.Component {
   }
   
   render () {
-    // return this.state.isSignedIn ? 
     return  (
-        <>
-          <div className="app">
-            <NavigationBar handleSignOut={this.handleSignOut}/>
-            <Router>
-              <Routes>
-                <Route path="/analysis" element={<Analysis/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/form" element={<FormContainer/>} />
-                <Route path="/" element={<About/>} />
-              </Routes>
-            </Router>
-          </div>
-          <Footer />
-        </>
-      )
-    // :
-    // <SignIn handleSignIn={this.handleSignIn}/>;
-
-
+      <>
+        <div className="app">
+          <NavigationBar handleSignOut={this.handleSignOut}/>
+          <Router>
+            <Routes>
+              <Route path="/analysis" element={<Analysis/>} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/form" element={<FormContainer/>} />
+              <Route path="/sign-in" element={<SignIn/>} />
+              <Route path="/" element={<About/>} />
+            </Routes>
+          </Router>
+        </div>
+        <Footer />
+      </>
+    )
   }
 }
 
