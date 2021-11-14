@@ -3,6 +3,9 @@ import Footer from './Components/Footer/FooterContainer'
 import Analysis from './Components/Analysis/AnalysisContainer'
 import SignIn from './Components/SignIn'
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Card, Container } from 'react-bootstrap'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,16 +42,16 @@ class App extends React.Component {
     // return this.state.isSignedIn ? 
     return  (
         <>
-          <NavigationBar handleSignOut={this.handleSignOut}/>
           <div className="app">
+            <NavigationBar handleSignOut={this.handleSignOut}/>
             <Router>
               <Routes>
                 <Route path="/analysis" element={<Analysis/>} />
                 <Route exact={true} path="/" element={<FormContainer/>} />
               </Routes>
             </Router>
-            <Footer />
           </div>
+          <Footer />
         </>
       )
     // :
