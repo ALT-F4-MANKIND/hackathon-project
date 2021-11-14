@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import { Button, Breadcrumb, Row, Col, Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function NavigationBar () {
@@ -11,6 +11,7 @@ function NavigationBar () {
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/">Make an entry</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/analysis">Trends</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/other-form">other-form</Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
