@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset= "utf-8"> <!-- PROVIDES SOMETHING -->
-        <title></title>
-        <link rel="stylesheet" href="index1.css" />
+        <meta charset="utf-8">
+        <title>Level Up</title>             <!--Name of Tab-->
+        <link rel="stylesheet" href="index1.css">
     </head>
     <body>
-        <div id="root"></div> 
-        <h1>LEVEL UP</h1>
-        <p style="font-size:2.5vw;">How much sleep did you get last night?</p>
-        <form>
-            0-4 HRS  :<input type="radio" name="sleep" value = "0-4"><br>
+        <!--action tells where to send information to, this sends data to php file-->
+        <form action="contactform.php" method="post">
+            <!-- <input type = "text" name="Email" placeholder="Write your email...">
+            <input type = "text" name="Email" value="Write your email...">  Value writes an actual text on the text box your comments here --> 
 
-            4-6 HRS  :<input type="radio" name="sleep" value = "4-6"><br>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
 
-            7-9 HRS  :<input type="radio" name="sleep" value = "7-9"><br>
+            <!--Sleep-->
+            Less than 4 hrs: <input type = "radio" name="time" value="Less than 4 hrs hrs"> <!--Radio-->
+            4-6 hrs: <input type = "radio" name="time" value="4-6 hrs"> <!--Radio-->
+            7-9 hrs: <input type = "radio" name="time" value="7-9 hrs"> <!--Radio-->
+            9-11 hrs: <input type = "radio" name="time" value="9-11 hrs"> <!--Radio-->
+            Greater than 11 hrs: <input type = "radio" name="time" value=">Greater than 11 hrs">
 
-            9-11 HRS:<input type="radio" name="sleep" value = "9-11"><br>
+            <!--Nap-->
+            <p style="font-size:1vw;">Did you take a nap today?</p>
+            <select name="Nap">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <!--Feeling-->
+            <p style="font-size:1vw;">On a scale of 1-5, how are you feeling?</p>
+            <img class = "img-smile" src="img/smile.png" alt ="">
+            <select name="feeling">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <!--Buttons-->
+            <button type="submit" name="Submit">Submit</button>
+            <button type="reset">Clear</button>
         </form>
-        <p style="font-size:2.5vw;">On a scale of 1-5, how are you feeling?</p>
-        <img class = "img-smile" src="img/smile.png" alt ="">
+
 
     </body>
-
-</html>
