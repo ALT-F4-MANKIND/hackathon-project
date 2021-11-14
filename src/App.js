@@ -104,13 +104,15 @@ class App extends React.Component {
     return  (
       <>
         <div className="app">
-          <NavigationBar handleSignOut={this.handleSignOut}/>
+          <NavigationBar 
+            handleSignOut={this.handleSignOut}
+          />
           <Router>
             <Routes>
               <Route path="/analysis" element={<Analysis/>} />
               <Route path="/about" element={<About/>} />
               <Route path="/form" element={<FormContainer/>} />
-              <Route path="/sign-in" element={<SignIn/>} />
+              <Route path="/sign-in" element={<SignIn handleSignIn={this.handleSignIn}/>} />
               <Route path="/" element={<About/>} />
             </Routes>
           </Router>

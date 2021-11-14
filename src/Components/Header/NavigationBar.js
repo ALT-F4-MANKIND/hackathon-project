@@ -4,6 +4,8 @@ import { Form, FormControl, Nav, Navbar, Button, NavDropdown, Container, Link } 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function NavigationBar (props) {
+    // let buttonText = props.
+    
     return(
         <Navbar bg="light" expand="lg">
             <Container fluid>
