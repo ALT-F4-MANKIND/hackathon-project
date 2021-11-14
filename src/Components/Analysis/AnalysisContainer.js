@@ -1,14 +1,17 @@
 import React from 'react'
 import './Analysis.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Card, Container } from 'react-bootstrap'
-
+import Graph from '../Graph'
+import { Card, Container, Title } from 'react-bootstrap'
+    
 export default function AnalysisContainer() {
     return(
-        <Container className="content-wrap">
+        <Container className="content-wrap">                
             <Card>
-                <Card.Title>Analysis</Card.Title>
-                <Card.Body>This?</Card.Body>
+                <Card.Title className="m-4">Analysis</Card.Title>
+                <Card.Body>
+                    <Graph />
+                </Card.Body>
             </Card>
         </Container>
     )
