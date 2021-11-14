@@ -9,9 +9,8 @@ function NavigationBar () {
             <Navbar.Brand className="ml-3">HealthCheck</Navbar.Brand>
             <Navbar.Collapse>
                 <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="/">Make an entry</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/analysis">Trends</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/other-form">other-form</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/other-form">Make an Entry</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/analysis">Your Stats</Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

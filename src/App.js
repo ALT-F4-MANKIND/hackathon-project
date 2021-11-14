@@ -2,6 +2,7 @@ import FormContainer from './Components/Form/FormContainer'
 import OtherForm from './Components/OtherForm'
 import Footer from './Components/Footer/FooterContainer'
 import Analysis from './Components/Analysis/AnalysisContainer'
+import SignIn from './Components/SignIn'
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -15,26 +16,38 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      onFormPage: true
+      isSignedIn: false
     }
+    this.handleSignIn = this.handleSignIn.bind(this)
+  }
+
+  handleSignIn() {
+    console.log("handleSignIn")
+    this.setState({
+      isSignedIn: true
+    })
   }
   
   render () {
-    return (
-      <>
-        <NavigationBar />
-        <div className="app">
-          <Router>
-            <Routes>
-              <Route path="/other-form" element={<OtherForm/>} />
-              <Route path="/analysis" element={<Analysis/>} />
-              <Route exact={true} path="/" element={<FormContainer/>} />
-            </Routes>
-          </Router>
-          <Footer />
-        </div>
-      </>
-    );
+    return this.state.isSignedIn ? 
+      (
+        <>
+          <NavigationBar />
+          <div className="app">
+            <Router>
+              <Routes>
+                <Route path="/other-form" element={<OtherForm/>} />
+                <Route path="/analysis" element={<Analysis/>} />
+                <Route exact={true} path="/" element={<FormContainer/>} />
+              </Routes>
+            </Router>
+            <Footer />
+          </div>
+        </>
+      )
+    :
+    <SignIn handleSignIn={this.handleSignIn}/>;
+
 
   }
 }

@@ -9,26 +9,22 @@ const OtherForm = () => (
         <body>
             <div className="logo-row">
                 <img className="img-level_up" src="level_up.png" alt ="" />
-            </div>
-            
+            </div>        
             <form name="Level Up" id="Level Up" action="contactform.php" method="post">
                 <div>
                     <label for="date">Date: </label>
                     <input type="date" name="date" id="date" required />
                 </div>
-
                 <br />
                 <div>
                     <p>What is your weight?</p>
                     <p><input type="text" placeholder="Enter your weight in centimeters" required /></p>
                 </div>
-
                 <br />
                 <div>
                     <p>What is your height?</p>
                     <p><input type="text" placeholder="Enter your height in centimeters" width="100%" required /></p>
                 </div>
-
                 <br />
                 <p>How many hours of sleep did you get?</p>
                 <div className="sleep">
@@ -37,7 +33,6 @@ const OtherForm = () => (
                     <p><input type="radio" name="sleep" value="7-9" />7-9</p>
                     <p><input type="radio" name="sleep" value="9-11" />9+</p>
                 </div>
-
                 <br />
                 <p>How many meals have you eaten today?</p>
                 <div className="meals">
@@ -47,7 +42,6 @@ const OtherForm = () => (
                     <p><input type="radio" name="eat" value="3" />3</p>
                     <p><input type="radio" name="eat" value="More than 4" />4+</p>
                 </div>
-
                 <br />
                 <div>
                     <p>Did you take a nap today?</p>
@@ -56,7 +50,6 @@ const OtherForm = () => (
                         <option value="No">No</option>
                     </select>
                 </div>
-
                 <br />
                 <div>
                     <p>On a scale of 1-5, how are you feeling?</p>
@@ -69,9 +62,7 @@ const OtherForm = () => (
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-
                 </div>
-
                 <br />
                 <div className="buttons">
                     <button 
@@ -88,10 +79,7 @@ const OtherForm = () => (
                         Clear
                     </button>
                 </div>
-
             </form>
-
-
         </body>
     </>
 )
