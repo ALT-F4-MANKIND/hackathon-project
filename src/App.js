@@ -76,6 +76,7 @@ function checkForSignIn()
 
 class App extends React.Component {
   constructor() {
+    
     super()
     this.state = {
       isSignedIn: false
