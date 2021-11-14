@@ -17,6 +17,7 @@ Application
 --
   * This application is run using Node.js
   * Front end
-      * We used HTML and CSS
+      * HTML, CSS
+      * React, Bootstrap, Recharts 
   * Back end:
-      *    We used Javascript, React, Node.js
+      * Firebase as the database
