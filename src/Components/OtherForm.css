@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e69671,#e4e671 );
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 210px;
+    height: 30px;
+}
+
+input[type="date"] {
+    height: 30px;
+}
+
+.sleep, .meals {
+    color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-smile{
+    width: 400px
+}
+.img-level_up {
+    width: 400px;
+    height: auto;
+}
+
+.logo-row {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-submit{
+    background-color: rgb(29, 184, 55);
+    padding: 15px 32px;
+    font-size: 18px;
+    color: white;
+}
+
+.button-reset{
+    background-color: rgb(182, 11, 53);
+    padding: 15px 32px;
+    font-size: 18px;
+    color: white;
+    margin-left: 10rem;
+}

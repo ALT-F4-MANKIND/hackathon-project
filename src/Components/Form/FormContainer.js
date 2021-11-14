@@ -1,12 +1,8 @@
 import React from 'react'
 import FormComponent from './FormComponent'
 
-
-
 import {initializeApp} from 'firebase/app';
 import {getFirestore, doc, setDoc} from 'firebase/firestore';
-
-
 
 // web app's firebase configuration
 const firebaseApp = initializeApp({ 
@@ -24,32 +20,14 @@ const firestore = getFirestore();
 
 const user = doc(firestore, '/users/users/');
 function writeUsers(userMood) {
-    setDoc(user, {mood: userMood,
-                    name: "John",
-                    furry: true,
-                    hell: "yeah"});
+    setDoc(user, {
+        mood: userMood, 
+        tookNap: false,
+        hoursOfSleep: 8,
+        numberOfMeals: 3,
+        qualityOfSleep: 10
+    });
 }
-
-
-
-/*
-const userData = {
-    name: "Frank",
-    favorites: {
-      food: "Pizza",
-      color: "Blue",
-      subject: "Recess"
-    },
-}
-*/
-
-
-
-
-
-
-
-
 
  class Form extends React.Component {
     constructor () {
@@ -74,21 +52,16 @@ const userData = {
     }
 
     handleSubmit () {
-        writeUsers(this.state.mood); // this is giving me attitude 
+        writeUsers(this.state.mood);
         console.log("Handle Submit")
         // Send state off to make an entry into database
-        
-        
     }
 
     handleMoodClick (mood) {
         console.log("you are now", mood)
-        
-        console.log()
         this.setState({
             mood: mood
         })
-        
     }
     
     render () {
