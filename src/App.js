@@ -23,7 +23,7 @@ class App extends React.Component {
 
   handleSignIn() {
     console.log("handleSignIn")
-    this.setState({
+    this.setState({       // ROBERTO: here you want to check if the user is signed in or not, if they are, set isSignedIn to true
       isSignedIn: true
     })
   }
