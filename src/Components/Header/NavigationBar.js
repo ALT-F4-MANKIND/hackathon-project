@@ -22,6 +22,7 @@ function NavigationBar (props) {
                     <Button 
                         variant="outline-success"
                         onClick={props.handleSignOut}
+                        href="/sign-in"
                     >
                         Sign out
                     </Button>
