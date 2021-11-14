@@ -1,0 +1,12 @@
+footer {
+    background-color: #101114;
+    /* color: blueviolet; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    min-height: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

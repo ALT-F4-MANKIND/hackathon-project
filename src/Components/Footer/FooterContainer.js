@@ -1,9 +1,10 @@
 import React from 'react'
+import './Footer.css'
 
 function Footer () {
     return(
-        <footer>
-            My Footer
+        <footer className="footer">
+            Made by Alt_F4 Mankind
         </footer>
     )
 }

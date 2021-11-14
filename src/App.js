@@ -1,7 +1,7 @@
 import './App.css';
-import Header from './Components/Header'
-import FormContainer from './Components/FormContainer'
-import Footer from './Components/Footer'
+import Header from './Components/Header/HeaderContainer'
+import FormContainer from './Components/Form/FormContainer'
+import Footer from './Components/Footer/FooterContainer'
 
 function App() {
   return (
