@@ -1,8 +1,11 @@
 import React from 'react'
 import FormComponent from './FormComponent'
 
+
+
 import {initializeApp} from 'firebase/app';
-import {getFirestore, doc, setDoc} from 'firebase/firestore';
+import {getFirestore, doc, setDoc, collection, addDoc, documentId} from 'firebase/firestore';
+
 
 
 
@@ -30,6 +33,19 @@ function writeUserData(userMood, hasTakenNap, hoursSlept, numMeals, sleepQuality
         qualityOfSleep: sleepQuality
     });
 }
+
+
+const userCollection = collection(firestore, 'users');
+
+
+async function addNewUser(userName) {
+    const newUser = await addDoc(userCollection, {name: userName});
+
+    // adds user to database with randomized userID, I've been trying to change it for hours
+    // but nothings works
+    
+}
+
 
 
  class Form extends React.Component {
