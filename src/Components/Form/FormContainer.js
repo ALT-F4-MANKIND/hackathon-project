@@ -2,7 +2,7 @@ import React from 'react'
 import FormComponent from './FormComponent'
 
 import {initializeApp} from 'firebase/app';
-import {getFirestore, doc, setDoc, addDoc} from 'firebase/firestore';
+import {getFirestore, doc, setDoc} from 'firebase/firestore';
 
 // web app's firebase configuration
 const firebaseApp = initializeApp({ 
