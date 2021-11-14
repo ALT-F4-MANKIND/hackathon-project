@@ -109,8 +109,9 @@ class App extends React.Component {
             <Router>
               <Routes>
                 <Route path="/analysis" element={<Analysis/>} />
-                {/* <Route path="/about" element={<About/>} /> */}
-                <Route exact={true} path="/" element={<FormContainer/>} />
+                <Route path="/about" element={<About/>} />
+                <Route path="/form" element={<FormContainer/>} />
+                <Route path="/" element={<About/>} />
               </Routes>
             </Router>
           </div>
