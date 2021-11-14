@@ -5,45 +5,45 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const data = [
   {
     name: 'Week 1',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    sleep: 4,
+    mood: 2,
+    amt: 2,
   },
   {
     name: 'Week 2',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    sleep: 3,
+    mood: 1,
+    amt: 2,
   },
   {
     name: 'Week 3',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    sleep: 2,
+    mood: 9,
+    amt: 2,
   },
   {
     name: 'Week 4',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    sleep: 2,
+    mood: 3,
+    amt: 2,
   },
   {
     name: 'Week 5',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    sleep: 1,
+    mood: 4,
+    amt: 2,
   },
   {
     name: 'Week 6',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    sleep: 2,
+    mood: 3,
+    amt: 2,
   },
   {
     name: 'Week 7',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    sleep: 3,
+    mood: 4,
+    amt: 2,
   },
 ];
 
@@ -67,8 +67,8 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="mood" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="sleep" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
     );

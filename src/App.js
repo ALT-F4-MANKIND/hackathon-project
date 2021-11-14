@@ -1,6 +1,7 @@
 import FormContainer from './Components/Form/FormContainer'
 import Footer from './Components/Footer/FooterContainer'
 import Analysis from './Components/Analysis/AnalysisContainer'
+import About from './Components/About'
 import SignIn from './Components/SignIn'
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -108,6 +109,7 @@ class App extends React.Component {
             <Router>
               <Routes>
                 <Route path="/analysis" element={<Analysis/>} />
+                {/* <Route path="/about" element={<About/>} /> */}
                 <Route exact={true} path="/" element={<FormContainer/>} />
               </Routes>
             </Router>

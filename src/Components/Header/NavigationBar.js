@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function NavigationBar (props) {
     return(
         <Navbar expand="lg">
-            <Navbar.Brand className="ml-3">HealthCheck</Navbar.Brand>
+            <Navbar.Brand className="ml-3"><Nav.Link href="/about">HealthCheck</Nav.Link></Navbar.Brand>
             <Navbar.Collapse>
                 <Nav>
                     <Nav.Item><Nav.Link href="/">Make an Entry</Nav.Link></Nav.Item>

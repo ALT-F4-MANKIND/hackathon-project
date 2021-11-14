@@ -163,6 +163,7 @@ export default function FormComponent (props) {
                             className="button-submit" 
                             type="submit" 
                             name="Submit"
+                            onClick={props.handleSubmit}
                         >
                             Submit
                         </button>
