@@ -1,50 +1,57 @@
-.form {
-    color: rgb(61, 61, 219);
+.body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e69671,#e4e671 );
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
 }
 
-.submit {
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    background-color: #282c34;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
+input[type="text"] {
+    width: 210px;
+    height: 30px;
 }
 
-.submit:hover{
-    color:#000000;
-    background-color:#FFFFFF;
+input[type="date"] {
+    height: 30px;
 }
 
-@media all and (max-width:30em){
-    .submit {
-        display:block;
-        margin:0.4em auto;
-    }
+.sleep, .meals {
+    /* color: red; */
+    /* display: flex; */
+    /* flex-direction: row; */
 }
 
-.mood {
-    max-width: 10%;
+.img-smile{
+    width: 400px
+}
+.img-level_up {
+    width: 400px;
     height: auto;
-    opacity: 0.5;
 }
 
-.mood:hover {
-    max-width: 12%;
-    color: red;
-    cursor: pointer;
-    opacity: 1;
+.logo-row {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.moodPanel {
-    display: flexbox;
-    flex-direction: row;
-    align-items: center;
+.button-submit{
+    background-color: rgb(29, 184, 55);
+    padding: 15px 32px;
+    font-size: 18px;
+    color: white;
+}
+
+.button-reset{
+    background-color: rgb(182, 11, 53);
+    padding: 15px 32px;
+    font-size: 18px;
+    color: white;
+    margin-left: 10rem;
+}
+
+.big-checkbox {
+    width: 30px;
+    height: 30px;
 }

@@ -1,5 +1,4 @@
 import FormContainer from './Components/Form/FormContainer'
-import OtherForm from './Components/OtherForm'
 import Footer from './Components/Footer/FooterContainer'
 import Analysis from './Components/Analysis/AnalysisContainer'
 import SignIn from './Components/SignIn'
@@ -99,14 +98,13 @@ class App extends React.Component {
   }
   
   render () {
-    return this.state.isSignedIn ? 
-      (
+    // return this.state.isSignedIn ? 
+    return  (
         <>
           <NavigationBar handleSignOut={this.handleSignOut}/>
           <div className="app">
             <Router>
               <Routes>
-                <Route path="/other-form" element={<OtherForm/>} />
                 <Route path="/analysis" element={<Analysis/>} />
                 <Route exact={true} path="/" element={<FormContainer/>} />
               </Routes>
@@ -115,8 +113,8 @@ class App extends React.Component {
           </div>
         </>
       )
-    :
-    <SignIn handleSignIn={this.handleSignIn}/>;
+    // :
+    // <SignIn handleSignIn={this.handleSignIn}/>;
 
 
   }

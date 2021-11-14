@@ -9,7 +9,7 @@ function NavigationBar (props) {
             <Navbar.Brand className="ml-3">HealthCheck</Navbar.Brand>
             <Navbar.Collapse>
                 <Nav>
-                    <Nav.Item><Nav.Link href="/other-form">Make an Entry</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/">Make an Entry</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/analysis">Your Stats</Nav.Link></Nav.Item>
                 </Nav>
                 <Nav className="justify-content-end">

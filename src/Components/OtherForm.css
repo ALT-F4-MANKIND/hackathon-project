@@ -19,7 +19,8 @@ input[type="date"] {
 .sleep, .meals {
     color: red;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+
 }
 
 .img-smile{
