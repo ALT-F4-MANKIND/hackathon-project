@@ -8,8 +8,8 @@ export default function FormComponent (props) {
         <Form>
             <div className="body">
                 <div className="logo-row">
-                    <img className="img-level_up" src="level_up.png" alt ="" />
-                </div>        
+                    <img className="img-level_up" src="level_up.png" alt ="level_up.png not found" />
+                </div>
                 <form name="Level Up" id="Level Up" action="contactform.php" method="post">
                     <div>
                         <label htmlFor="date">Date: </label>
@@ -143,7 +143,7 @@ export default function FormComponent (props) {
                     <br />
                     <div>
                         <p>On a scale of 1-5, how are you feeling?</p>
-                        <img className = "img-smile" src="smile.png" alt ="" />
+                        <img className = "img-smile" src="smile.png" alt ="smile.png not found" />
                         <br />
                         <select 
                             name="mood"

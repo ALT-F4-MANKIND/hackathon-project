@@ -3,6 +3,7 @@ import Footer from './Components/Footer/FooterContainer'
 import Analysis from './Components/Analysis/AnalysisContainer'
 import About from './Components/About'
 import SignIn from './Components/SignIn'
+import NavigationBar from './Components/Header/NavigationBar';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Container } from 'react-bootstrap'
@@ -12,7 +13,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom"
-import NavigationBar from './Components/Header/NavigationBar';
 import './App.css'
 
 import 'firebase/auth';
